@@ -5,7 +5,7 @@ var times = ['9AM', '10AM', '11AM', '12PM', '1PM', '2PM',
 times.forEach (function(item, index, array){
     var divEl = document.createElement('div');
     var divEl1 = document.createElement('div');
-    var divEl2 = document.createElement('div');
+    var textEl = document.createElement('textarea');
     var divEl3 = document.createElement('div');
 
     divEl.id = "rows";
@@ -17,23 +17,19 @@ times.forEach (function(item, index, array){
     divEl1.classList.add("timeBlock");
     
 
-    divEl2.id = times[index];
-    divEl2.innerText = "Text";
-    divEl2.classList.add("col-md-10");
-    divEl2.classList.add("textBlock");
+    textEl.id = times[index] + "text";
+    textEl.classList.add("col-md-10");
+    textEl.classList.add("textBlock");
   
 
-    divEl3.id = times[index]
+    divEl3.id = times[index] + "save";
     divEl3.innerText = "Save";
     divEl3.classList.add("col-md-1");
     divEl3.classList.add("saveBlock");
     
-    console.log(divEl1);
-    console.log(divEl2);
-    console.log(divEl3);
     rowGen.appendChild(divEl);
     timeBlock = document.getElementById('rows')
     timeBlock.appendChild(divEl1);
-    timeBlock.appendChild(divEl2);
+    timeBlock.appendChild(textEl);
     timeBlock.appendChild(divEl3);
 })
