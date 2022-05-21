@@ -1,6 +1,6 @@
 var rowGen = document.getElementById('timeblocks');
-var times = ['9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM',
-'3:00 PM', '4:00 PM', '5:00 PM'];
+var times = ['9AM', '10AM', '11AM', '12PM', '1PM', '2PM',
+'3PM', '4PM', '5PM'];
 
 times.forEach (function(item, index, array){
     var divEl = document.createElement('div');
@@ -13,19 +13,19 @@ times.forEach (function(item, index, array){
 
     divEl1.id = times[index];
     divEl1.innerText = item;
-    divEl1.classList.add("col-md-2");
+    divEl1.classList.add("col-md-1");
     divEl1.classList.add("timeBlock");
     
 
     divEl2.id = times[index];
     divEl2.innerText = "Text";
-    divEl2.classList.add("col-md-8");
+    divEl2.classList.add("col-md-10");
     divEl2.classList.add("textBlock");
   
 
     divEl3.id = times[index]
     divEl3.innerText = "Save";
-    divEl3.classList.add("col-md-2");
+    divEl3.classList.add("col-md-1");
     divEl3.classList.add("saveBlock");
     
     console.log(divEl1);
