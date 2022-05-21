@@ -1,6 +1,13 @@
 var rowGen = document.getElementById('timeblocks');
 var times = ['9AM', '10AM', '11AM', '12PM', '1PM', '2PM',
 '3PM', '4PM', '5PM'];
+var currentTime = moment().format("MMMM Do YYYY, h:mm:ss a");
+var timer = document.getElementById('currentDay');
+setInterval(function(){
+    var currentTime = moment().format("MMMM Do YYYY, h:mm:ss a");
+    var timer = document.getElementById('currentDay');
+    timer.innerText = currentTime;
+  },1000);
 
 times.forEach (function(item, index, array){
     var divEl = document.createElement('div');

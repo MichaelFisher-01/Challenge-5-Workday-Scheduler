@@ -23,3 +23,15 @@
   padding-top: 25px;
   height: 95px;
 }
+
+.past {
+  background-color: gray;
+}
+
+.present {
+  background-color: red;
+}
+
+.future {
+  background-color: lightgreen;
+}
