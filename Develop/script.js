@@ -43,7 +43,7 @@ function chartSetup (){
       divText.classList.add("col-md-10");
       divText.classList.add("textBlock");
     // THis section creates the save button in the third column.
-      divSave.id = item + "save";
+      divSave.id = index;
       divSave.innerText = "Save";
       divSave.classList.add("btn")
       divSave.classList.add('btn-primary')
@@ -56,7 +56,7 @@ function chartSetup (){
       timeBlock.appendChild(divText);
       timeBlock.appendChild(divSave);
       // This makes it so each button can be clicked.
-      document.getElementById(item+"save").addEventListener("click",saveData);
+      document.getElementById(index).addEventListener("click",saveData);
   })
 }
 
@@ -189,7 +189,14 @@ function colorCheck() {
 
 function saveData (event) {
   event.preventDefault();
-  console.log(event);
+  var btn = event.target;
+  var textSelect = btn.id;
+  var textGrab = document.getElementById(times[textSelect]);
+  var text = textGrab.value;
+  console.log(text);
+  localStorage.setItem("textInfo" + textSelect, text)
+  console.log(textSelect);
+  console.log(btn);
 }
 
 
