@@ -4,7 +4,7 @@ var times = ['9AM', '10AM', '11AM', '12PM', '1PM', '2PM',
 '3PM', '4PM', '5PM'];
 var currentTime = moment().format("MMMM Do YYYY, h:mm:ss a");
 var timer = document.getElementById('currentDay');
-var hour = moment().get('hour');
+var hour = 11;
 
 //Page Load
 updater();
@@ -19,7 +19,6 @@ function updater(){
   setInterval(function(){
     var currentTime = moment().format("MMMM Do YYYY, h:mm:ss a");
     var timer = document.getElementById('currentDay');
-    hour = moment().get('hour');
     timer.innerText = currentTime;
   },1000);} 
 // This function will generate and oragnize a div a text area and button for each time.
@@ -45,9 +44,7 @@ function chartSetup (){
       divText.classList.add("textBlock");
     // THis section creates the save button in the third column.
       divSave.id = index;
-      divSave.innerText = "Save";
-      divSave.classList.add("btn")
-      divSave.classList.add('btn-primary')
+      divSave.classList.add("icon-save");
       divSave.classList.add("col-md-1");
       divSave.classList.add("saveBlock");
     // After creating each element we post them to the page.

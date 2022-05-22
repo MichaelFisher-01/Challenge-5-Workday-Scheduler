@@ -1,8 +1,27 @@
+.icon-save::before {
+  content: "\f0c7";
+  font: var(--fa-font-solid);
+  font-family: "Font Awesome 5 Free"; 
+  font-weight: 900; 
+  content: "\f0c7";
+  display: inline-block;
+  text-rendering: auto;
+  color: 255,255,255, 1.0;
+  -webkit-font-smoothing: antialiased;
+  
+}
+
 .jumbotron {
   text-align: center;
   border-bottom: 5px solid black;
 }
 
+.container button {
+  border-bottom: 0px;
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 1px solid black;
+}
 .timeBlock {
   border-top: 1px dashed black;
   padding-top: 10px;
@@ -13,24 +32,25 @@
 
 .textBlock {
   height: 95px;
+  margin-bottom: 1px;
 }
 
 .saveBlock {
   text-align:center;
-  border: 1px solid black;
-  padding-top: 25px;
+  background-color: #0baed4;
+  border-top-right-radius: 15%;
+  border-bottom-right-radius: 15%;
   height: 95px;
 }
 
 .past {
-  background-color: gray;
-  color: white;
+  background-color: #d3d2d3;
 }
 
 .present {
-  background-color: red;
+  background-color: #fe6961;
 }
 
 .future {
-  background-color: lightgreen;
+  background-color: #78dc77;
 }
