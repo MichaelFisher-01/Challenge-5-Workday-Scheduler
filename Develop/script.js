@@ -9,6 +9,7 @@ var hour = moment().get('hour');
 //Page Load
 updater();
 chartSetup();
+inputData();
 colorCheck();
 console.log(hour);
 
@@ -187,17 +188,23 @@ function colorCheck() {
   }
 }
 
+function inputData() {
+  times.forEach(function(item, index, array){
+    textSelect = document.getElementById(times[index]);
+    storageInfo = localStorage.getItem("textInfo" + index)
+    textSelect.value = storageInfo;
+  })
+}
+
 function saveData (event) {
   event.preventDefault();
   var btn = event.target;
-  var textSelect = btn.id;
-  var textGrab = document.getElementById(times[textSelect]);
+  var textBoxSelect = btn.id;
+  var textGrab = document.getElementById(times[textBoxSelect]);
   var text = textGrab.value;
-  console.log(text);
-  localStorage.setItem("textInfo" + textSelect, text)
-  console.log(textSelect);
-  console.log(btn);
+  localStorage.setItem("textInfo" + textBoxSelect, text)
 }
+
 
 
 
