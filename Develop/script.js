@@ -4,7 +4,7 @@ var times = ['9AM', '10AM', '11AM', '12PM', '1PM', '2PM',
 '3PM', '4PM', '5PM'];
 var currentTime = moment().format("MMMM Do YYYY, h:mm:ss a");
 var timer = document.getElementById('currentDay');
-var hour = 11;
+var hour = moment().get('hour');
 
 //Page Load
 updater();
@@ -200,6 +200,9 @@ function saveData (event) {
   var textGrab = document.getElementById(times[textBoxSelect]);
   var text = textGrab.value;
   localStorage.setItem("textInfo" + textBoxSelect, text)
+  var alert = document.createElement('p')
+  alert.innerText = "Saved to Local Storage."
+  timer.appendChild(alert); // Appending to the Timer so the message goes away after a second.
 }
 
 
